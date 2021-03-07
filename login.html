@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Music Discovery Website</title>
+   </head>
+   <style type="text/css">
+    	button{
+		background-color: rgba(255,255,255,.2);
+		border: 0;
+		padding: 16px;
+		color: white;
+		border-radius:7px;
+		margin: 15px;
+		width: 300px;
+		font-size:18px;
+        height: 54px;
+        cursor: pointer;
+
+		}
+		button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+        button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+        button:hover span {
+        padding-right: 25px;
+}
+        button:hover span:after {
+        opacity: 1;
+        right: 0;
+}
+</style>
+   <style type="text/css">
+    center {
+      padding: 1px 0;
+      border: none;
+      text-align: center;
+}
+   </style>
+   <style type="text/css">
+   body {
+  background: #272125;
+}
+
+   </style>
+   <body>
+      <header>
+         <div class="container">
+             <center><h1 class="logo" style="color: rgba(255,255,255,.95);">Welcome!</h1></center>
+           <center><h1 class="logo" style="color: rgba(255,255,255,.95);">Music Discovery Website</h1></center>
+            <strong>
+                <center><button><a style="text-decoration:none;color: rgba(255,255,255,.95);" onclick="window.location.href='{{ url_for('authenticate') }}'"><span>Log In</span></a></button></center>
+                <center><button><a style="text-decoration:none;color: rgba(255,255,255,.95);" onclick="window.location.href='https://www.spotify.com/us/signup/'"><span>Create Account</span></a></button></center>
+            </strong>
+         </div>
+      </header>
+   </body>
+</html>
